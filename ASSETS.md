@@ -19,3 +19,5 @@ Fotografías ilustrativas de fauxels / Pexels, misma sesión y tratamiento visua
 - https://www.pexels.com/photo/people-discuss-about-graphs-and-rates-3184292/
 - https://www.pexels.com/photo/top-view-photo-of-people-near-wooden-table-3183150/
 - https://www.pexels.com/de-de/foto/foto-von-leuten-die-auf-laptop-schauen-3183181/
+
+Capturas reales del portfolio: dermaraiz.com.ar, tomentocapilar.com.ar y lopezleonindumentaria.com.ar, tomadas durante la revisión local.
