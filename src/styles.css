@@ -109,3 +109,20 @@ input:focus,select:focus,textarea:focus{outline:2px solid #387cff;outline-offset
 .form-trap{display:none}.form-alternative{display:block;text-align:center;font-size:.85rem;margin-top:18px;color:#bcd5ff;text-decoration:underline;text-underline-offset:4px}.services h3{min-height:2.4em}.steps h3{min-height:1.2em}
 @media(max-width:950px){.main-nav{gap:16px;font-size:.85rem}.faq{gap:35px}.project-info{padding:20px}}
 @media(max-width:700px){.main-header{min-height:88px;flex-wrap:wrap;gap:0;padding:12px 0}.menu-toggle{display:flex;align-items:center;gap:10px;min-height:44px;padding:10px 12px;border:1px solid #344563;border-radius:7px;background:#111c2d;color:white;font:inherit;font-size:.9rem;cursor:pointer}.main-header .main-nav{display:none}.main-header .main-nav.is-open{display:flex;width:100%;flex-direction:column;align-items:stretch;gap:0;padding:14px 0 6px}.main-nav>a{padding:14px 12px;min-height:48px}.main-nav .nav-contact{margin-top:10px}.faq{grid-template-columns:1fr;gap:32px;padding-top:55px;padding-bottom:65px}.faq summary{font-size:1rem}.projects{gap:28px}.project-cover{height:145px}.project-info p{min-height:0}.services h3{min-height:0}}
+/* Justify prose while preserving headings, labels and centered controls. */
+.intro,
+.section-heading>p,
+.services article>p,
+.project-info>p,
+.about-copy>p,
+.steps article>p,
+.contact-copy>p:not(.eyebrow),
+.faq>div>p:not(.eyebrow),
+.faq details>p,
+.form-note,
+.footer-brand>p{
+  text-align:justify;
+  text-align-last:start;
+  hyphens:auto;
+  overflow-wrap:break-word;
+}
