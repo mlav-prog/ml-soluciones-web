@@ -6,3 +6,9 @@ Fotografías ilustrativas (no representan al equipo ni a clientes de ML):
 - Daniil Komov / Pexels: https://www.pexels.com/photo/modern-workspace-with-laptop-and-code-display-34804003/
 - Artem Podrez / Pexels: https://www.pexels.com/photo/a-laptop-on-the-table-8512444/
 - Lisa Fotios / Pexels: https://www.pexels.com/photo/laptop-computer-on-brown-wooden-desk-1263558/
+
+## Fotografías del proceso (revisión)
+- Conversación: https://www.pexels.com/photo/people-sitting-with-notebooks-7963837/
+- Planificación: https://www.pexels.com/photo/page-from-a-calendar-planner-19399416/
+- Diseño, Compagnons: https://unsplash.com/photos/website-wireframe-sketch-on-paper-4UGmm3WRUoQ
+- Navegación móvil: https://www.pexels.com/photo/browsing-the-website-on-a-smartphone-17793437/

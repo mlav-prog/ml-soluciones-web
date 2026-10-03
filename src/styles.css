@@ -55,3 +55,24 @@ input:focus,select:focus,textarea:focus{outline:2px solid #387cff;outline-offset
 .project-cover.lopez{background:#272a2e;color:#f0f1f4}
 .photo-caption{bottom:90px}
 @media(max-width:650px){.photo-caption{bottom:92px}}
+/* Center the badge on the photograph, at every viewport. */
+.hero-visual{padding-left:0}
+.hero-detail{left:50%;right:auto;transform:translateX(-50%);width:max-content;max-width:calc(100% - 24px)}
+.services{border:0;gap:22px;align-items:stretch}
+.services article,.services article+article{padding:30px;border:1px solid #29364b;border-radius:16px;background:linear-gradient(145deg,#141e2e,#0d131e);display:flex;flex-direction:column;position:relative;overflow:hidden;transition:border-color .3s,box-shadow .3s,opacity .7s,transform .7s}
+.services article:hover{border-color:#527fc3;box-shadow:0 16px 45px #0003}
+.service-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:32px}
+.service-icon{display:grid;place-items:center;width:62px;height:62px;border:1px solid #37527a;border-radius:15px;background:#172d4e;color:#80afff}
+.service-top .number{margin:0;font-family:Manrope,sans-serif;font-size:1.15rem;color:#7186a5}
+.service-purpose{font-size:.7rem;letter-spacing:.12em;color:#8babdf;margin-bottom:14px}
+.services h3{font-size:1.65rem;line-height:1.2}
+.services p{font-size:.96rem;line-height:1.75;margin-bottom:20px}
+.services ul{margin-top:auto;margin-bottom:0;padding-top:0}
+.services li{padding-left:17px;position:relative;border-color:#263449}
+.services li:before{content:'·';position:absolute;left:0;color:#71a9ff;font-size:1.5rem;line-height:1}
+.about-copy p:first-child{color:#e0e7f3;font-size:1.2rem;line-height:1.75}
+.about-copy p{line-height:1.85}
+.steps article:nth-child(4) .step-photo img{object-position:50% 47%}
+.step-photo img{filter:saturate(.7) brightness(.9)}
+@media(max-width:950px){.services{gap:15px}.services article,.services article+article{padding:22px}.services h3{font-size:1.4rem}.service-purpose{font-size:.65rem}}
+@media(max-width:650px){.hero-detail{left:50%;right:auto;transform:translateX(-50%);padding:16px;gap:12px}.hero-detail div span{font-size:.73rem}.services{gap:18px}.services article,.services article+article{padding:26px}.services h3{font-size:1.65rem}.service-purpose{font-size:.7rem}.service-top{margin-bottom:24px}}
