@@ -96,3 +96,6 @@ input:focus,select:focus,textarea:focus{outline:2px solid #387cff;outline-offset
 .contact-method a{display:flex;align-items:center;gap:12px}
 .contact-icon{width:22px;height:22px;flex:0 0 22px}
 .contact-method a>span{min-width:0;overflow-wrap:anywhere}
+.footer-grid>div:last-child>a.footer-contact-link{display:flex;align-items:center;gap:10px}
+.footer-contact-link .contact-icon{width:20px;height:20px;flex-basis:20px}
+.footer-contact-link>span{min-width:0;overflow-wrap:anywhere}
