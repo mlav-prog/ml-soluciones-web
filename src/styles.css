@@ -93,3 +93,6 @@ input:focus,select:focus,textarea:focus{outline:2px solid #387cff;outline-offset
 @media(max-width:700px){.contact{grid-template-columns:1fr;padding:30px 22px;gap:30px;margin-bottom:40px}.contact .inquiry-form{padding:24px 18px}.contact h2{font-size:2.35rem}.contact-copy{padding-top:0}}
 .steps .step-photo img{filter:saturate(.8) brightness(.94);object-position:center}
 .steps article:nth-child(4) .step-photo img{object-position:center}
+.contact-method a{display:flex;align-items:center;gap:12px}
+.contact-icon{width:22px;height:22px;flex:0 0 22px}
+.contact-method a>span{min-width:0;overflow-wrap:anywhere}
