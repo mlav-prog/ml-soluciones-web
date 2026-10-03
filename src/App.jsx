@@ -3,7 +3,8 @@ import { useEffect, useState, useRef } from 'react';
 function ServiceIcon({type}) { return <svg viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">{type===0 ? <><rect x="3" y="5" width="26" height="22" rx="3"/><path d="M3 12h26M8 8.5h.1M12 8.5h.1M9 18h7M9 22h13"/></> : type===1 ? <><path d="M6 12h20l2 16H4l2-16Z"/><path d="M11 13V9a5 5 0 0 1 10 0v4"/></> : <><circle cx="14" cy="14" r="9"/><path d="m21 21 8 8M9 17l4-5 4 3 3-5"/></>}</svg>; }
 
 function ContactForm() {
-  return <form className="inquiry-form" action="https://formsubmit.co/mlsolucioneswebar@gmail.com" method="POST" target="_blank" rel="noopener noreferrer">
+  return <form className="inquiry-form" action="https://formsubmit.co/mlsolucioneswebar@gmail.com" method="POST">
+    <input type="hidden" name="_url" value={window.location.origin + window.location.pathname} />
     <input type="hidden" name="_subject" value="Nueva consulta desde ML Soluciones Web" />
     <input type="hidden" name="_template" value="table" />
     <div className="form-trap" aria-hidden="true"><label>Dejar vacío<input type="text" name="_honey" tabIndex={-1} autoComplete="off" /></label></div>
@@ -13,7 +14,7 @@ function ContactForm() {
     <label>¿Qué necesitás?<select name="service" required defaultValue=""><option value="" disabled>Elegí una opción</option><option>Página web o landing page</option><option>Tienda online</option><option>Mejoras web y SEO</option><option>Necesito orientación</option></select></label>
     <label>Un poco sobre tu proyecto<textarea name="message" required minLength={10} maxLength={2000} rows={4} placeholder="Qué hacés, qué te gustaría lograr y si ya tenés una web..." /></label>
     <button className="button" type="submit">Enviar consulta por correo</button>
-    <p className="form-note">Al enviar, se abre FormSubmit para completar la verificación antispam y confirmar el envío. Usaré tus datos para responder esta consulta.</p>
+    <p className="form-note">Al enviar, continuarás en FormSubmit para completar la verificación antispam y confirmar el envío. Usaré tus datos para responder esta consulta.</p>
     <a className="form-alternative" href="https://wa.me/5493482679540" target="_blank" rel="noopener noreferrer">Prefiero consultar por WhatsApp</a>
   </form>;
 }
