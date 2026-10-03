@@ -76,3 +76,20 @@ input:focus,select:focus,textarea:focus{outline:2px solid #387cff;outline-offset
 .step-photo img{filter:saturate(.7) brightness(.9)}
 @media(max-width:950px){.services{gap:15px}.services article,.services article+article{padding:22px}.services h3{font-size:1.4rem}.service-purpose{font-size:.65rem}}
 @media(max-width:650px){.hero-detail{left:50%;right:auto;transform:translateX(-50%);padding:16px;gap:12px}.hero-detail div span{font-size:.73rem}.services{gap:18px}.services article,.services article+article{padding:26px}.services h3{font-size:1.65rem}.service-purpose{font-size:.7rem}.service-top{margin-bottom:24px}}
+/* Blue contact panel and aligned field labels. */
+.contact{background:#0955db;border:0;border-radius:20px;padding:56px;gap:44px;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);align-items:start;margin-bottom:70px}
+.contact-copy{padding-top:10px;min-width:0}
+.contact-copy .eyebrow{color:#d5e5ff}
+.contact h2{font-size:clamp(2.3rem,3.4vw,3.3rem)}
+.contact h2 span{color:#c5dcff}
+.contact-copy>p:not(.eyebrow),.contact-method>span{color:#e0ebff}
+.contact-method a:hover{color:white;text-decoration:underline}
+.contact .inquiry-form{background:#0e1c34;border-color:#ffffff30;padding:30px;min-width:0}
+.form-row{align-items:start}
+.inquiry-form label>.field-title{font-size:.85rem;color:#e1e7f1;line-height:inherit}
+.field-title small{font-size:.75rem;color:#aab9cf}
+.inquiry-form input,.inquiry-form select{min-height:51px}
+@media(max-width:950px){.contact{padding:36px;gap:28px;grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.contact .inquiry-form{padding:24px}}
+@media(max-width:700px){.contact{grid-template-columns:1fr;padding:30px 22px;gap:30px;margin-bottom:40px}.contact .inquiry-form{padding:24px 18px}.contact h2{font-size:2.35rem}.contact-copy{padding-top:0}}
+.steps .step-photo img{filter:saturate(.8) brightness(.94);object-position:center}
+.steps article:nth-child(4) .step-photo img{object-position:center}

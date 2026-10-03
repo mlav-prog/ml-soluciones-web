@@ -12,3 +12,10 @@ Fotografías ilustrativas (no representan al equipo ni a clientes de ML):
 - Planificación: https://www.pexels.com/photo/page-from-a-calendar-planner-19399416/
 - Diseño, Compagnons: https://unsplash.com/photos/website-wireframe-sketch-on-paper-4UGmm3WRUoQ
 - Navegación móvil: https://www.pexels.com/photo/browsing-the-website-on-a-smartphone-17793437/
+
+## Serie actual del proceso
+Fotografías ilustrativas de fauxels / Pexels, misma sesión y tratamiento visual. No representan a Matías ni a sus clientes. Sustituyen las cuatro imágenes anteriores.
+- https://www.pexels.com/photo/photo-of-people-having-discussion-3184632/
+- https://www.pexels.com/photo/people-discuss-about-graphs-and-rates-3184292/
+- https://www.pexels.com/photo/top-view-photo-of-people-near-wooden-table-3183150/
+- https://www.pexels.com/de-de/foto/foto-von-leuten-die-auf-laptop-schauen-3183181/
