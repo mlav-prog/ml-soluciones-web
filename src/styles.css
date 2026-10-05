@@ -222,3 +222,17 @@ input:focus,select:focus,textarea:focus{outline:2px solid #387cff;outline-offset
 .form-note{font-size:.8rem;line-height:1.6}
 .footer-bottom{line-height:1.7}
 }
+
+/* Direct service enquiries and clear project scope. */
+.service-cta{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:24px;padding:13px 15px;border:1px solid #446da6;border-radius:8px;background:#152b49;color:#d9e8ff;font-weight:600;font-size:.9rem;min-height:48px}
+.service-cta:hover{background:#204779;border-color:#88b4f7}
+.project-scope{margin:0 0 25px;border-top:1px solid #2a3950;padding-top:16px}
+.project-scope dt{font-size:.7rem;color:#8eb6f4;letter-spacing:.07em;text-transform:uppercase;margin-bottom:5px}
+.project-scope dd{margin:0 0 14px;font-size:.87rem;line-height:1.65;color:#c0cbdb;text-align:justify;hyphens:auto}
+.project-scope dd:last-child{margin-bottom:0}
+.project-info .text-link{margin-top:auto}
+.quote-note{font-size:.86rem;line-height:1.7;color:#becce0;border-left:2px solid #609dff;padding-left:14px;margin:-8px 0 24px;text-align:justify;hyphens:auto}
+.floating-whatsapp{position:fixed;bottom:max(22px,env(safe-area-inset-bottom));right:22px;z-index:20;display:flex;align-items:center;gap:10px;min-height:52px;padding:14px 20px;border:1px solid #5ea782;border-radius:30px;background:#116640;color:white;box-shadow:0 6px 24px #0005;font-size:.9rem;font-weight:600}
+.floating-whatsapp[hidden]{display:none}.floating-whatsapp:hover{background:#0c7950}
+.footer-bottom{padding-bottom:90px}
+@media(max-width:650px){.floating-whatsapp{bottom:max(16px,env(safe-area-inset-bottom));right:14px;padding:14px;min-width:52px;justify-content:center}.floating-whatsapp>span{display:none}.service-controls,.process-controls{padding-right:56px}.project-scope{margin-bottom:20px}}
