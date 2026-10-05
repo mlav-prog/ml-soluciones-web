@@ -208,7 +208,7 @@ input:focus,select:focus,textarea:focus{outline:2px solid #387cff;outline-offset
 .form-row{grid-template-columns:1fr 1fr;gap:16px}
 }
 @media(max-width:950px){
-.intro,.section-heading>p,.services article>p,.project-info>p,.about-copy>p,.stage-body>p,.contact-copy>p:not(.eyebrow),.faq>div>p:not(.eyebrow),.faq details>p,.form-note,.footer-brand>p{text-align:left;hyphens:none}
+.intro,.section-heading>p,.services article>p,.project-info>p,.about-copy>p,.stage-body>p,.contact-copy>p:not(.eyebrow),.faq>div>p:not(.eyebrow),.faq details>p,.form-note,.footer-brand>p{text-align:justify;text-align-last:start;hyphens:auto}
 }
 @media(max-width:650px){
 .section{padding-top:60px;padding-bottom:60px}
