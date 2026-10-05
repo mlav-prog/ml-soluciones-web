@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mlsolucionesweb.com.ar/sitemap.xml
