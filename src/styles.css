@@ -173,3 +173,24 @@ input:focus,select:focus,textarea:focus{outline:2px solid #387cff;outline-offset
 .projects-carousel::-webkit-scrollbar{display:none}
 .projects-carousel .project{opacity:1;transform:none;transition:none}
 }
+
+/* Read the process one step at a time on mobile, without autoplay. */
+.process-controls{display:none}
+@media(max-width:650px){
+.process-timeline{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;overscroll-behavior-x:contain;scrollbar-width:none}
+.process-timeline::-webkit-scrollbar{display:none}
+.process-timeline>li{flex:0 0 100%;scroll-snap-align:start;scroll-snap-stop:always;border:1px solid #293c59;border-radius:14px;padding:24px;background:#101824}
+.process-timeline li:not(:last-child):before,.process-timeline li:nth-child(2):before{display:none}
+.process-stage{display:flex;flex-direction:column;padding:0;gap:0;height:100%;opacity:1;transform:none;transition:none}
+.stage-marker{width:44px;height:44px;flex-shrink:0}
+.stage-body{padding-top:24px;flex:1}
+.stage-body h3{font-size:1.25rem;min-height:0}
+.stage-body>p{min-height:0;margin:16px 0 24px;flex:1}
+.stage-result{margin-top:auto}
+.process-controls{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:18px;padding-top:16px;border-top:1px solid #2c4163;color:#aec8ee;font-size:.85rem}
+.process-controls>div{display:flex;gap:10px}
+.process-controls button{width:44px;height:44px;border:1px solid #3a547c;border-radius:50%;background:#122440;color:#d6e5ff;font-size:22px;cursor:pointer}
+.process-controls button:disabled{opacity:.3;cursor:default}
+.process-controls button:focus-visible{outline:2px solid #8db9ff;outline-offset:3px}
+.process-bottom{margin-top:26px}
+}
