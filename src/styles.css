@@ -194,3 +194,31 @@ input:focus,select:focus,textarea:focus{outline:2px solid #387cff;outline-offset
 .process-controls button:focus-visible{outline:2px solid #8db9ff;outline-offset:3px}
 .process-bottom{margin-top:26px}
 }
+
+/* Final responsive readability and spacing pass. */
+@media(min-width:651px) and (max-width:1000px){
+.services{grid-template-columns:repeat(2,minmax(0,1fr))}
+.services>.service-slide:nth-child(4){grid-column:1/-1}
+.projects{grid-template-columns:repeat(2,minmax(0,1fr))}
+.projects>.service-slide:nth-child(4){grid-column:1/-1;width:calc(50% - 8px);justify-self:center}
+.contact{grid-template-columns:1fr;gap:32px}
+.contact-copy>p:not(.eyebrow){max-width:600px}
+.contact h2 br{display:none}
+.contact h2{max-width:600px}
+.form-row{grid-template-columns:1fr 1fr;gap:16px}
+}
+@media(max-width:950px){
+.intro,.section-heading>p,.services article>p,.project-info>p,.about-copy>p,.stage-body>p,.contact-copy>p:not(.eyebrow),.faq>div>p:not(.eyebrow),.faq details>p,.form-note,.footer-brand>p{text-align:left;hyphens:none}
+}
+@media(max-width:650px){
+.section{padding-top:60px;padding-bottom:60px}
+.about-copy p:first-child{font-size:1.08rem;line-height:1.7}
+.about-copy p{font-size:1rem;line-height:1.75}
+.services h3{font-size:1.5rem}
+.services p{line-height:1.65}
+.service-top{margin-bottom:24px}
+.hero-detail strong{font-size:.88rem}
+.hero-detail div span{font-size:.72rem}
+.form-note{font-size:.8rem;line-height:1.6}
+.footer-bottom{line-height:1.7}
+}
