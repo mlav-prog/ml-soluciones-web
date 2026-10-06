@@ -1,3 +1,4 @@
+import { installAnalytics } from './analytics.js';
 import { useEffect, useState, useRef, Children } from 'react';
 
 function ServiceIcon({type}) { return <svg viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">{type===0 ? <><rect x="3" y="5" width="26" height="22" rx="3"/><path d="M3 12h26M8 8.5h.1M12 8.5h.1M9 18h7M9 22h13"/></> : type===1 ? <><path d="M6 12h20l2 16H4l2-16Z"/><path d="M11 13V9a5 5 0 0 1 10 0v4"/></> : <><circle cx="14" cy="14" r="9"/><path d="m21 21 8 8M9 17l4-5 4 3 3-5"/></>}</svg>; }
@@ -107,6 +108,7 @@ function Header() {
 }
 
 export default function App() {
+  useEffect(installAnalytics, []);
   const [selectedService, setSelectedService] = useState('');
   useEffect(() => {
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) return;
