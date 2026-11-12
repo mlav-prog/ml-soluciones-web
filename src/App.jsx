@@ -97,16 +97,45 @@ function ContactForm({ service, onServiceChange }) {
 function Header() {
   const [open, setOpen] = useState(false);
   const toggle = useRef(null);
+  const header = useRef(null);
+  const closeDropdowns = () => header.current?.querySelectorAll('details[open]').forEach(el => { el.open = false; });
+  const closeNavigation = () => { closeDropdowns(); setOpen(false); };
   useEffect(() => {
-    const close = event => { if (event.key === 'Escape' && open) { setOpen(false); toggle.current?.focus(); } };
+    const close = event => {
+      if (event.key !== 'Escape') return;
+      const dropdown = header.current?.querySelector('details[open]');
+      if (dropdown) { dropdown.open = false; dropdown.querySelector('summary').focus(); }
+      else if (open) { setOpen(false); toggle.current?.focus(); }
+    };
+    const outside = event => { if (!header.current?.contains(event.target)) closeNavigation(); };
     const query = window.matchMedia('(min-width: 1001px)');
-    const resize = () => { if (query.matches) setOpen(false); };
-    document.addEventListener('keydown', close); query.addEventListener('change', resize);
-    return () => { document.removeEventListener('keydown', close); query.removeEventListener('change', resize); };
+    const resize = () => { closeDropdowns(); if (query.matches) setOpen(false); };
+    document.addEventListener('keydown', close);
+    document.addEventListener('pointerdown', outside);
+    document.addEventListener('focusin', outside);
+    query.addEventListener('change', resize);
+    return () => {
+      document.removeEventListener('keydown', close);
+      document.removeEventListener('pointerdown', outside);
+      document.removeEventListener('focusin', outside);
+      query.removeEventListener('change', resize);
+    };
   }, [open]);
-  return <header className="main-header"><a className="brand" href="#inicio" onClick={() => setOpen(false)} aria-label="ML Soluciones Web, inicio"><img src="assets/ml-icon.png" alt="" width="58" height="58" /><span>ML<span className="brand-sub">SOLUCIONES WEB</span></span></a><button ref={toggle} className="menu-toggle" type="button" aria-expanded={open} aria-controls="main-nav" onClick={() => setOpen(!open)}>{open ? 'Cerrar' : 'Menú'}<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="1.7" aria-hidden="true">{open ? <path d="m6 6 12 12M6 18 18 6"/> : <path d="M4 6h16M4 12h16M4 18h16"/>}</svg></button><nav id="main-nav" className={open ? 'main-nav is-open' : 'main-nav'} aria-label="Navegación principal" onClick={event => {if(event.target.closest('a')) setOpen(false)}}><a href="#servicios">Servicios</a><a href="/diseno-paginas-web/">Diseño web</a><a href="#trabajos">Trabajos</a><a href="/trabajos/tomento-capilar/">Caso Tomento</a><a href="#sobre-mi">Sobre mí</a><a href="#preguntas">Preguntas</a><a className="button small nav-contact" href="#contacto">Hablemos</a></nav></header>;
+  const dropdownToggle = event => {
+    if (event.currentTarget.open) header.current?.querySelectorAll('details[open]').forEach(el => {
+      if (el !== event.currentTarget) el.open = false;
+    });
+  };
+  return <header ref={header} className="main-header">
+    <a className="brand" href="#inicio" onClick={closeNavigation} aria-label="ML Soluciones Web, inicio"><img src="assets/ml-icon.png" alt="" width="58" height="58" /><span>ML<span className="brand-sub">SOLUCIONES WEB</span></span></a>
+    <button ref={toggle} className="menu-toggle" type="button" aria-expanded={open} aria-controls="main-nav" onClick={() => {closeDropdowns();setOpen(!open);}}>{open ? 'Cerrar' : 'Menú'}<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="1.7" aria-hidden="true">{open ? <path d="m6 6 12 12M6 18 18 6"/> : <path d="M4 6h16M4 12h16M4 18h16"/>}</svg></button>
+    <nav id="main-nav" className={open ? 'main-nav is-open' : 'main-nav'} aria-label="Navegación principal" onClick={event => {if(event.target.closest('a')) closeNavigation();}}>
+      <details className="nav-dropdown" onToggle={dropdownToggle}><summary>Servicios <span aria-hidden="true">⌄</span></summary><div className="nav-dropdown-panel"><a href="#servicios">Todos los servicios</a><a href="/diseno-paginas-web/">Diseño de páginas web</a></div></details>
+      <details className="nav-dropdown" onToggle={dropdownToggle}><summary>Trabajos <span aria-hidden="true">⌄</span></summary><div className="nav-dropdown-panel"><a href="#trabajos">Ver todos los trabajos</a><a href="/trabajos/tomento-capilar/">Caso Tomento Capilar</a></div></details>
+      <a href="#sobre-mi">Sobre mí</a><a href="#preguntas">Preguntas</a><a className="button small nav-contact" href="#contacto">Hablemos</a>
+    </nav>
+  </header>;
 }
-
 export default function App() {
   useEffect(installAnalytics, []);
   const [selectedService, setSelectedService] = useState('');
