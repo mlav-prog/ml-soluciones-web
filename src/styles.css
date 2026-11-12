@@ -265,3 +265,5 @@ input:focus,select:focus,textarea:focus{outline:2px solid #387cff;outline-offset
  .nav-dropdown-panel a{white-space:normal}
 }
 @media(prefers-reduced-motion:reduce){.nav-dropdown summary span{transition:none}}
+
+#trabajos .actions{flex-wrap:wrap;gap:20px 32px}
