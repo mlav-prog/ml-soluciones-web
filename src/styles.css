@@ -236,3 +236,13 @@ input:focus,select:focus,textarea:focus{outline:2px solid #387cff;outline-offset
 .floating-whatsapp[hidden]{display:none}.floating-whatsapp:hover{background:#0c7950}
 .footer-bottom{padding-bottom:90px}
 @media(max-width:650px){.floating-whatsapp{bottom:max(16px,env(safe-area-inset-bottom));right:14px;padding:14px;min-width:52px;justify-content:center}.floating-whatsapp>span{display:none}.service-controls,.process-controls{padding-right:56px}.project-scope{margin-bottom:20px}}
+
+/* Expanded navigation uses the collapsible menu on tablets too. */
+@media(min-width:701px) and (max-width:1000px){
+  .main-header{min-height:88px;flex-wrap:wrap;gap:0;padding:12px 0}
+  .menu-toggle{display:flex;align-items:center;gap:10px;min-height:44px;padding:10px 12px;border:1px solid #344563;border-radius:7px;background:#111c2d;color:white;font:inherit;font-size:.9rem;cursor:pointer}
+  .main-header .main-nav{display:none}
+  .main-header .main-nav.is-open{display:flex;width:100%;flex-direction:column;align-items:stretch;gap:0;padding:14px 0 6px}
+  .main-nav>a{padding:14px 12px;min-height:48px}
+  .main-nav .nav-contact{margin-top:10px}
+}
